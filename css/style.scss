@@ -55,16 +55,20 @@ header {
     color: rgb(101, 88, 71);
 }
 
-#message{
+#bloc_message{
     text-align: center;
     padding: 24px;
-    width: 515px;
+    width: 515pxù;
     font-size: 15px;
     font-weight: bold;
     border-radius: 20px;
     border : 4px solid #7a665c; 
     color: #7a665c;
     gap: 20px;
+}
+
+#message{
+    color: white;
 }
 
 /* === MAIN === */
@@ -103,15 +107,15 @@ header {
 #nombre-clic-add{
     position: absolute;
     z-index: 100;
-    left: 39%;
-    bottom: 27%;
+    left: 49%;
+    bottom: 42%;
     text-align: center;
     font-weight: bolder;
     font-size: 20px;
 }
 
 .nombre-clic-remove{
-    opacity: 100%;
+    opacity: 0%;
     transition: transform .1s;
 }
 
@@ -187,5 +191,7 @@ header {
     // margin-top: 40px;
     // margin-bottom: 20px;
 }
+
+
 
 /* === FOOTER === */

@@ -203,10 +203,13 @@ function nombreoeuf(){
 
 var nombreClic = document.querySelector("#nombre-clic-add");
 
-function createNumberOnClicker(){
+function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+async function createNumberOnClicker(){
     nombreClic.textContent = "+" + clickupdate;
-    nombreClic.classList.remove('.nombre-clic-add')
-    nombreClic.classList.add('.nombre-clic-remove');
+    nombreClic.classList.remove('nombre-clic-remove');
+    nombreClic.classList.remove('nombre-clic-add')
+    await sleep(100)
+    nombreClic.classList.add('nombre-clic-remove');
 }
 
 // SON
@@ -222,3 +225,77 @@ function audio(){
 setInterval( function nbtotaloeuf(){
     totaloeuf.innerHTML = "Total oeufs : " + oeuf_depuis_la_nuit_des_temps;
 },1000);
+
+// DÉSACTIVER ACHAT
+
+let button_1 = document.getElementById('button_one')
+
+function lock_update_one(){
+    setTimeout (lock_update_one,10)
+    if (cursorCost > oeuf){
+        button_1.style.borderColor = "#FF7F74";
+    }
+    else{
+        button_1.style.borderColor = "";
+    }
+}
+
+lock_update_one();
+
+
+let button_2 = document.getElementById('button_two')
+
+function lock_update_two(){
+    setTimeout (lock_update_two,10)
+    if (grandmaCost > oeuf){
+        button_2.style.borderColor = "#FF7F74";
+    }
+    else{
+        button_2.style.borderColor = "";
+    }
+}
+
+lock_update_two();
+
+let button_3 = document.getElementById('button_three')
+
+function lock_update_three(){
+    setTimeout (lock_update_three,10)
+    if (multipleCost > oeuf){
+        button_3.style.borderColor = "#FF7F74";
+    }
+    else{
+        button_3.style.borderColor = "";
+    }
+}
+
+lock_update_three();
+
+
+let button_4 = document.getElementById('button_four')
+
+function lock_update_four(){
+    setTimeout (lock_update_four,10)
+    if (bonusCost > oeuf){
+        button_4.style.borderColor = "#FF7F74";
+    }
+    else{
+        button_4.style.borderColor = "";
+    }
+}
+
+lock_update_four();
+
+
+
+// MESSAGE ALÉATOIRE
+
+function msg(){
+    let message = document.querySelector('#message');
+    let phrase = ["Ne comptez pas vos poussins avant qu'ils ne soient éclos.", "Qui vole un oeuf, ferait mieux de voler un boeuf.", "On ne demande pas à un cheval de pondre un oeuf.", "Le ciel est un oeuf, la terre en est le jaune."] 
+    setTimeout(msg,20000)
+    a = Math.trunc(Math.random()*phrase.length)
+    message.innerHTML = phrase[a];
+}
+
+msg();
