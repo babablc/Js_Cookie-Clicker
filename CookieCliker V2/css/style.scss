@@ -1,0 +1,191 @@
+
+
+
+/* === MISE EN PAGE GENERAL === */
+
+html{
+    font-family: 'Comfortaa', cursive;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    // background-color: rgb(255, 248, 190);
+    background: url('../images/landscape.jpeg');
+    background-size: 1450px;
+}
+
+img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Titre */
+
+/* Bouton */
+
+/* Class fonctionnel */
+/* MARGE */
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* === HEADER === */
+
+header {
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+#space {
+    text-align: center;
+    padding: 30px;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 20px;
+    color: rgb(101, 88, 71);
+}
+
+#message{
+    text-align: center;
+    padding: 24px;
+    width: 515px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    border : 4px solid #7a665c; 
+    color: #7a665c;
+    gap: 20px;
+}
+
+/* === MAIN === */
+
+#info{
+    margin:0 auto;
+}
+
+// NOMBRE OEUF
+
+#blockcounter{
+    text-align: center;
+    width: 30%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    color: #7a665c;
+    background-color: #ffffff;
+    border-radius: 25px;
+    transition: all 0.2s ease;
+}
+
+#cps {
+    text-align: center;
+    font-size: 15px;
+}
+
+// CLICKER
+
+#cookie-clicker{
+    height: 450px;
+}
+
+
+#nombre-clic-add{
+    position: absolute;
+    z-index: 100;
+    left: 39%;
+    bottom: 27%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.nombre-clic-remove{
+    opacity: 100%;
+    transition: transform .1s;
+}
+
+
+
+#clicker {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 40px;
+    justify-content: center;
+    position: relative;
+
+    img{
+        transition: transform .1s;
+    }
+
+}
+
+#clicker > .number {
+    z-index: 99;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+};
+
+#clicker:hover{
+
+    img:hover{
+        transform: scale(1.1);
+        }
+}
+
+// AMÉLIORATION
+
+#blocright {
+    width: 50%;
+}
+
+#amelioration {
+    text-align: center;
+
+    #blocamelioration{
+        display: flex;
+        flex-direction: column;  
+        gap: 20px;  
+    }
+    .bloc_amelioration_img{
+        width: 32%;
+    }
+
+    .bloc_amelioration_txt{
+        width: 65%;
+    }
+
+    #cursors, #grandmas, #multiples {
+        font-size: 40px;
+        padding: 20px;
+    }
+
+    button{
+        width:100%;
+        margin: 0 auto;
+        margin-top: 5px;
+        border-radius: 10px;
+        border: 4px solid rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.271);
+        color: #7a665c;
+        font-size: 20px;
+        text-align: justify;
+        align-items: center;
+    }
+
+    // margin-top: 40px;
+    // margin-bottom: 20px;
+}
+
+/* === FOOTER === */
